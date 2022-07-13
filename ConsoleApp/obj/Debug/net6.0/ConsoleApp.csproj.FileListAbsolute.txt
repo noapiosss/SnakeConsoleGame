@@ -1,0 +1,15 @@
+C:\Users\Lenovo\Desktop\beetroot-academy\dotnet-0622\consoleapp\bin\Debug\net6.0\ConsoleApp.exe
+C:\Users\Lenovo\Desktop\beetroot-academy\dotnet-0622\consoleapp\bin\Debug\net6.0\ConsoleApp.deps.json
+C:\Users\Lenovo\Desktop\beetroot-academy\dotnet-0622\consoleapp\bin\Debug\net6.0\ConsoleApp.runtimeconfig.json
+C:\Users\Lenovo\Desktop\beetroot-academy\dotnet-0622\consoleapp\bin\Debug\net6.0\ConsoleApp.dll
+C:\Users\Lenovo\Desktop\beetroot-academy\dotnet-0622\consoleapp\bin\Debug\net6.0\ConsoleApp.pdb
+C:\Users\Lenovo\Desktop\beetroot-academy\dotnet-0622\consoleapp\obj\Debug\net6.0\ConsoleApp.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\beetroot-academy\dotnet-0622\consoleapp\obj\Debug\net6.0\ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Desktop\beetroot-academy\dotnet-0622\consoleapp\obj\Debug\net6.0\ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\beetroot-academy\dotnet-0622\consoleapp\obj\Debug\net6.0\ConsoleApp.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\beetroot-academy\dotnet-0622\consoleapp\obj\Debug\net6.0\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\beetroot-academy\dotnet-0622\consoleapp\obj\Debug\net6.0\ConsoleApp.dll
+C:\Users\Lenovo\Desktop\beetroot-academy\dotnet-0622\consoleapp\obj\Debug\net6.0\refint\ConsoleApp.dll
+C:\Users\Lenovo\Desktop\beetroot-academy\dotnet-0622\consoleapp\obj\Debug\net6.0\ConsoleApp.pdb
+C:\Users\Lenovo\Desktop\beetroot-academy\dotnet-0622\consoleapp\obj\Debug\net6.0\ConsoleApp.genruntimeconfig.cache
+C:\Users\Lenovo\Desktop\beetroot-academy\dotnet-0622\consoleapp\obj\Debug\net6.0\ref\ConsoleApp.dll

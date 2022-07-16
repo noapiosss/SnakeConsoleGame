@@ -37,6 +37,7 @@ class SnakeGame
         _field.Render();      
         Console.CursorVisible = false;
     }
+    
     private void Update(object state)
     {
         if (_onGoing)

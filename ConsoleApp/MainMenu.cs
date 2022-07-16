@@ -31,7 +31,7 @@ class MainMenu
                 Start();
                 break;
             case (ConsoleKey.D2):
-                Highscores();
+                ShowHighscores();
                 break;
             case (ConsoleKey.D3):
                 Exit();
@@ -50,11 +50,12 @@ class MainMenu
         {
             _lastScore = _snakeGame.GetScore();
         }
-        Thread.Sleep(20);
-        RecordScore();
+        Thread.Sleep(50);
+        PostGameMessage();
         ShowMenu();
     }
-    private void Highscores()
+    
+    private void ShowHighscores()
     {        
         _highScores = ReadScores(_highScoreFileName);
         Console.Clear();
@@ -68,7 +69,7 @@ class MainMenu
         {
             for (int i = 0; i < _highScores.Count; i++)
             {
-                Console.WriteLine("{0,3} {1,-8} {2,3}", i+1+".", _highScores[i].Item2, _highScores[i].Item1);
+                Console.WriteLine("{0,3} {1,-10} {2,3}", i+1+".", _highScores[i].Item2, _highScores[i].Item1);
             }
         }        
         
@@ -82,30 +83,49 @@ class MainMenu
         Environment.Exit(0);
     }
 
-    private void RecordScore()
+    private void PostGameMessage()
     {
+        _highScores = ReadScores(_highScoreFileName);
         int size = _snakeGame.GetSize();
         Console.ForegroundColor = ConsoleColor.White;
-        Console.SetCursorPosition(1, size/2-2);
-        Console.Write("+-----------+");
-        Console.SetCursorPosition(1, size/2-1);
-        if (_lastScore / 10 == 0) 
-        {
-            Console.Write($"| SCORE: {_lastScore}  |");
+        if (_highScores.Last().Item1 < _lastScore)
+        {            
+            Console.SetCursorPosition(1, size/2-3);
+            Console.Write("+-----------+");
+            Console.SetCursorPosition(1, size/2-2);
+            Console.Write("|    NEW    |");
+            Console.SetCursorPosition(1, size/2-1);
+            Console.Write("| HIGHSCORE |");
+            Console.SetCursorPosition(1, size/2);
+            Console.Write("|ENTER NAME:|");
+            Console.SetCursorPosition(1, size/2+1);
+            Console.Write("|           |");
+            Console.SetCursorPosition(1, size/2+2);
+            Console.Write("+-----------+");
+
+            Console.SetCursorPosition(2, size/2+1);
+            string playerName = Console.ReadLine();
+            AddRecord(playerName, _lastScore);
         }
         else
         {
-            Console.Write($"| SCORE: {_lastScore} |");
+            Console.SetCursorPosition(1, size/2-2);
+            Console.Write("+-----------+");
+            Console.SetCursorPosition(1, size/2-1);
+            Console.Write($"| GAME OVER |");
+            Console.SetCursorPosition(1, size/2);
+            if (_lastScore / 10 == 0) 
+            {
+                Console.Write($"| SCORE:  {_lastScore} |");
+            }
+            else
+            {
+                Console.Write($"| SCORE: {_lastScore} |");
+            }
+            Console.SetCursorPosition(1, size/2+1);
+            Console.Write("+-----------+");
+            Console.ReadKey();
         }
-        Console.SetCursorPosition(1, size/2);
-        Console.Write("|ENTER NAME:|");
-        Console.SetCursorPosition(1, size/2+1);
-        Console.Write("|           |");
-        Console.SetCursorPosition(1, size/2+2);
-        Console.Write("+-----------+");
-        Console.SetCursorPosition(2, size/2+1);
-        string playerName = Console.ReadLine();
-        AddRecord(playerName, _lastScore);
     }
 
     private void AddRecord(string playerName, int score)

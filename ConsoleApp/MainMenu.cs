@@ -88,7 +88,7 @@ class MainMenu
         _highScores = ReadScores(_highScoreFileName);
         int size = _snakeGame.GetSize();
         Console.ForegroundColor = ConsoleColor.White;
-        if (_highScores.Last().Item1 < _lastScore)
+        if (_highScores.Count < 10 || _highScores.Last().Item1 < _lastScore)
         {            
             Console.SetCursorPosition(1, size/2-3);
             Console.Write("+-----------+");
